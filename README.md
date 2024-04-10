@@ -10,7 +10,6 @@ pip install .
 # Test the FASTAPI
 
 ```json
-
 {
   "Gender": "Male",
   "Married": "No",
@@ -24,14 +23,13 @@ pip install .
   "Credit_History": "1.0",
   "Property_Area": "Rural"
 }
-
-
 ```
 
 # Docker Commands
+
 ```
 docker build -t loan_pred:v1 .
-docker build -t manifoldailearning/cicd:latest . 
+docker build -t manifoldailearning/cicd:latest .
 docker push manifoldailearning/cicd:latest
 
 docker run -d -it --name modelv1 -p 8005:8005 manifoldailearning/cicd:latest bash
@@ -69,9 +67,7 @@ sudo systemctl start jenkins
 sudo systemctl status jenkins
 ```
 
-`
-sudo cat /var/lib/jenkins/secrets/initialAdminPassword
-`
+`sudo cat /var/lib/jenkins/secrets/initialAdminPassword`
 
 ```bash
 # Add Docker's official GPG key:
@@ -116,6 +112,4 @@ docker images --format "{{.ID}} {{.CreatedAt}}" | sort -rk 2 | awk 'NR==1{print 
 # Create Stage Branch
 `git checkout -b staging`
 `git push `
-
-
-
+```
